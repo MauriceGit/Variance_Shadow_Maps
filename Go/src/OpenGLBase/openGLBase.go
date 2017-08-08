@@ -25,8 +25,8 @@ var g_ComputeShaderID uint32
 // Normal Camera
 var g_fovy      = mgl32.DegToRad(90.0)
 var g_aspect    = float32(g_WindowWidth)/g_WindowHeight
-var g_nearPlane = float32(0.1)
-var g_farPlane  = float32(1000.0)
+var g_nearPlane = float32(1.0)
+var g_farPlane  = float32(200.0)
 
 // Light camera
 var g_smWidth, g_smHeight int32 = 480, 480

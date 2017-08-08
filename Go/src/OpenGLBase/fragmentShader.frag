@@ -14,8 +14,15 @@ uniform bool shadowEnabled;
 
 out vec4 colorOut;
 
+float linearizeDepth (float depth) {
+    float nearPlane = 1.0, farPlane = 200.0;
+    return (2.0*nearPlane) / (farPlane + nearPlane - depth * (farPlane - nearPlane));
+}
+
 float calcShadow() {
     float camDepth = lightSpacePos.z;
+
+    camDepth = linearizeDepth(camDepth);
 
     vec2 moments = texture(lightDepthTex, lightSpacePos.xy).rg;
 
