@@ -7,7 +7,7 @@ import (
     "runtime"
     "github.com/go-gl/mathgl/mgl32"
     "fmt"
-    "github.com/go-gl/gl/v4.5-core/gl"
+    "github.com/go-gl/gl/v3.3-core/gl"
     "github.com/go-gl/glfw/v3.2/glfw"
 )
 
@@ -388,7 +388,7 @@ func main() {
     g_objects = append(g_objects, CreateObject(CreateUnitCube(10),   mgl32.Vec3{4,8,-5}, mgl32.Vec3{3,1,1},   mgl32.Vec3{0.21,0.41,1},      false))
     g_objects = append(g_objects, CreateObject(CreateUnitSphere(10), mgl32.Vec3{-2,4,-3}, mgl32.Vec3{3,3,3},   mgl32.Vec3{1,0.06,0.14},      false))
 
-    g_light = CreateObject(CreateUnitSphere(10), mgl32.Vec3{3,15,0}, mgl32.Vec3{0.1,0.1,0.1}, mgl32.Vec3{1,1,0}, true)
+    g_light = CreateObject(CreateUnitSphere(10), mgl32.Vec3{3,16,0}, mgl32.Vec3{0.1,0.1,0.1}, mgl32.Vec3{1,1,0}, true)
 
     CreateFbo(&g_msFbo, &g_msColorTex, &g_msDepthTex, g_WindowWidth, g_WindowHeight, g_multisamplingEnabled)
 
@@ -400,7 +400,3 @@ func main() {
     mainLoop(window)
 
 }
-
-
-
-

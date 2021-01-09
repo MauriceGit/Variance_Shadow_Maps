@@ -2,7 +2,7 @@ package opengl
 
 import (
     //"github.com/go-gl/mathgl/mgl32"
-    "github.com/go-gl/gl/v4.5-core/gl"
+    "github.com/go-gl/gl/v3.3-core/gl"
     "strings"
     "fmt"
     "bytes"
@@ -220,7 +220,3 @@ func CreateFbo(fbo, colorTex, depthTex *uint32, width, height int32, multisampli
     CreateFboWithExistingTextures(fbo, colorTex, depthTex, texType)
 
 }
-
-
-
-

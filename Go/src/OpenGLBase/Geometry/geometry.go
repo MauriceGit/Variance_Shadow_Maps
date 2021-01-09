@@ -1,7 +1,7 @@
 package geometry
 
 import (
-    "github.com/go-gl/gl/v4.5-core/gl"
+    "github.com/go-gl/gl/v3.3-core/gl"
     "github.com/go-gl/mathgl/mgl32"
     "unsafe"
     "math"
@@ -237,4 +237,3 @@ func CreateObject(geo Geometry, pos, scale, color mgl32.Vec3, isLight bool) Obje
         IsLight: isLight,
     }
 }
-
