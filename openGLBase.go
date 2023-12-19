@@ -1,14 +1,11 @@
 package main
 
 import (
-    . "OpenGLBase/Geometry"
-    . "OpenGLBase/Camera"
-    . "OpenGLBase/OpenGL"
     "runtime"
     "github.com/go-gl/mathgl/mgl32"
     "fmt"
     "github.com/go-gl/gl/v3.3-core/gl"
-    "github.com/go-gl/glfw/v3.2/glfw"
+    "github.com/go-gl/glfw/v3.3/glfw"
 )
 
 // Constants and global variables
@@ -367,18 +364,17 @@ func main() {
         panic(err)
     }
 
-    path := "../Go/src/OpenGLBase/"
-    g_ShaderID, err = NewProgram(path+"vertexShader.vert", path+"fragmentShader.frag")
+    g_ShaderID, err = NewProgram("vertexShader.vert", "fragmentShader.frag")
     if err != nil {
         panic(err)
     }
 
-    g_varianceDepthShader, err = NewProgram(path+"simple.vert", path+"depthShader.frag")
+    g_varianceDepthShader, err = NewProgram("simple.vert", "depthShader.frag")
     if err != nil {
         panic(err)
     }
 
-    g_boxBlurCompute, err = NewComputeProgram(path+"movingBoxBlur.comp")
+    g_boxBlurCompute, err = NewComputeProgram("movingBoxBlur.comp")
     if err != nil {
         panic(err)
     }

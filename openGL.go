@@ -1,4 +1,4 @@
-package opengl
+package main
 
 import (
     //"github.com/go-gl/mathgl/mgl32"
